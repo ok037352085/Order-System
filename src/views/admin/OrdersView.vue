@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onUnmounted } from 'vue'
-import { collection, query, orderBy, onSnapshot, updateDoc, deleteDoc, doc, getDocs } from 'firebase/firestore'
+import { collection, query, orderBy, where, onSnapshot, updateDoc, deleteDoc, doc, getDocs, Timestamp } from 'firebase/firestore'
 import { db } from '../../firebase'
 import AdminLayout from '../../components/AdminLayout.vue'
 
@@ -32,8 +32,15 @@ const pendingCount = computed(() =>
   orders.value.filter(o => o.status === 'pending').length
 )
 
+const todayStart = new Date()
+todayStart.setHours(0, 0, 0, 0)
+
 const unsubscribe = onSnapshot(
-  query(collection(db, 'orders'), orderBy('createdAt', 'desc')),
+  query(
+    collection(db, 'orders'),
+    where('createdAt', '>=', Timestamp.fromDate(todayStart)),
+    orderBy('createdAt', 'desc')
+  ),
   async (snap) => {
     const result = await Promise.all(
       snap.docs.map(async (d) => {
