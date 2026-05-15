@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+
 .admin-header {
     background: linear-gradient(90deg,rgba(224, 172, 0, 1) 0%, rgba(217, 47, 0, 1) 100%);
 }

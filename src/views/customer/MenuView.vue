@@ -64,7 +64,7 @@ function onOptionConfirm(selectedOptions) {
 </script>
 
 <template>
-  <div class="min-h-screen bg-base-200">
+  <div class="min-h-screen" style="background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/breakfast-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
 
     <!-- Header -->
     <div class="user-header text-primary-content sticky top-0 z-10">
@@ -75,7 +75,7 @@ function onOptionConfirm(selectedOptions) {
     </div>
 
     <!-- Category Tabs -->
-    <div class="bg-base-100 sticky top-14 z-10 shadow-sm">
+    <div class="bg-base-100 sticky z-10 shadow-sm">
       <div class="container mx-auto px-4 overflow-x-auto">
         <div class="flex gap-2 py-3 w-max">
           <button
