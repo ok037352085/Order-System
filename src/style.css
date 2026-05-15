@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.admin-header {
+    background: linear-gradient(90deg,rgba(224, 172, 0, 1) 0%, rgba(217, 47, 0, 1) 100%);
+}
+
+.admin-btn {
+    background: #FA3600;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.user-header {
+    background: linear-gradient(90deg,rgba(222, 171, 2, 1) 0%, rgba(227, 110, 0, 1) 100%);
+}
+
+.user-btn {
+    background: #F37500;
+    color: #fff;
+    border-radius: 10px;
+}
