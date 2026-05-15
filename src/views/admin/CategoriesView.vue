@@ -79,8 +79,8 @@ async function remove(cat) {
               <td class="w-16">{{ cat.sortOrder }}</td>
               <td class="font-medium">{{ cat.name }}</td>
               <td class="text-right">
-                <button class="btn btn-ghost btn-sm" @click="openEdit(cat)">編輯</button>
-                <button class="btn btn-ghost btn-sm text-error" @click="remove(cat)">刪除</button>
+                <button class="btn btn-ghost btn-sm" style="border-radius: 10px;" @click="openEdit(cat)">編輯</button>
+                <button class="btn btn-ghost btn-sm text-error" style="border-radius: 10px;" @click="remove(cat)">刪除</button>
               </td>
             </tr>
           </tbody>
@@ -104,7 +104,7 @@ async function remove(cat) {
         </label>
 
         <div class="modal-action">
-          <button class="btn btn-ghost" @click="showModal = false">取消</button>
+          <button class="btn btn-ghost" style="border-radius: 10px;" @click="showModal = false">取消</button>
           <button class="btn btn-primary" :disabled="saving" @click="save">
             <span v-if="saving" class="loading loading-spinner loading-sm"></span>
             {{ saving ? '儲存中...' : '儲存' }}

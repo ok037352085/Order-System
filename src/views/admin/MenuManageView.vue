@@ -209,8 +209,8 @@ async function removeProd(product) {
               <p class="text-sm text-base-content/50">{{ productCount(cat.id) }} 項商品</p>
             </div>
             <div class="flex gap-1" @click.stop>
-              <button class="btn btn-ghost btn-sm" @click="openEditCat(cat)">編輯</button>
-              <button class="btn btn-ghost btn-sm text-error" @click="removeCat(cat)">刪除</button>
+              <button class="btn btn-ghost btn-sm" style="border-radius: 10px;" @click="openEditCat(cat)">編輯</button>
+              <button class="btn btn-ghost btn-sm text-error" style="border-radius: 10px;" @click="removeCat(cat)">刪除</button>
             </div>
           </div>
         </div>
@@ -260,8 +260,8 @@ async function removeProd(product) {
                     :checked="product.isAvailable" @change="toggleAvailable(product)" />
                 </td>
                 <td class="text-right">
-                  <button class="btn btn-ghost btn-sm" @click="openEditProd(product)">編輯</button>
-                  <button class="btn btn-ghost btn-sm text-error" @click="removeProd(product)">刪除</button>
+                  <button class="btn btn-ghost btn-sm" style="border-radius: 10px;" @click="openEditProd(product)">編輯</button>
+                  <button class="btn btn-ghost btn-sm text-error" style="border-radius: 10px;" @click="removeProd(product)">刪除</button>
                 </td>
               </tr>
             </tbody>
